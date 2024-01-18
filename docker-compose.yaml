@@ -4,7 +4,7 @@ services:
 
   openapi-nodejs:
     container_name: openapi-nodejs
-    image: node:20.11.0-alpine
+    image: node:20.11.0-alpine3.19
     tty: true
     ports:
       - 3000:3000
