@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "find -name \"*.spec.ts\" | xargs node --import tsx --test",
     "codegen:openapi": "npx openapi-typescript 'openapi/**/*.yaml' --output codegen/",
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.8.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
@@ -21,6 +23,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "openapi-typescript": "^6.7.4",
+    "prisma": "^5.8.1",
+    "tsx": "^4.7.0",
     "typescript": "^5"
   }
 }
