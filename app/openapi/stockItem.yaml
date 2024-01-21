@@ -13,7 +13,12 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/StockItem"
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
       responses:
         "201":
           $ref: "#/components/responses/Created"
@@ -57,7 +62,11 @@ components:
     StockItem:
       type: object
       required:
+        - id
         - name
       properties:
+        id:
+          type: string
+          format: uuid
         name:
           type: string

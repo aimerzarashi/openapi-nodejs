@@ -26,6 +26,8 @@ export interface components {
         message?: string;
       }[];
     StockItem: {
+      /** Format: uuid */
+      id: string;
       name: string;
     };
   };
@@ -66,7 +68,9 @@ export interface operations {
   PostStockItem: {
     requestBody: {
       content: {
-        "application/json": components["schemas"]["StockItem"];
+        "application/json": {
+          name: string;
+        };
       };
     };
     responses: {
